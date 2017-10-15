@@ -3,6 +3,12 @@
     <body>
         <h1 style="color: purple">Hey {{.Name}} </h1>
         <h2 style="color: blue;">I added some styling to my Go project!</h2>
+   
+        {{if .DBStatus}}
+            <p>Database connection is alive</p>
+        {{else}}
+            <p>Database connection is dead</p>    
+        {{end}}
     </body>
     
 </html>
