@@ -21,6 +21,7 @@ func main() {
 
 	//route handler
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		//change greeting, based on name param in url. if no param, default to Gopher
 		p := Page{Name: "Gopher"}
 		if name := r.FormValue("name"); name != "" {
 			p.Name = name
