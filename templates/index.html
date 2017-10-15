@@ -1,14 +1,21 @@
 <html>
     <head></head>
     <body>
-        <h1 style="color: purple">Hey {{.Name}} </h1>
-        <h2 style="color: blue;">I added some styling to my Go project!</h2>
-   
-        {{if .DBStatus}}
-            <p>Database connection is alive</p>
-        {{else}}
-            <p>Database connection is dead</p>    
-        {{end}}
+        <form id="search-form" action="">
+            <input name="seach"/>
+            <input type="submit" value="Search">
+        </form>
+        <table witdh="100%">
+            <thead>
+                <tr style = "text-align: left;" >
+                    <th width = "40%">Title</th>
+                    <th width = "30%">Author</th>
+                    <th width = "10%">Year</th>
+                    <th width = "20%">Id</th>
+                </tr>
+            </thead>
+            <tbody id="seach-results"></tbody>
+        </table>
     </body>
     
 </html>
